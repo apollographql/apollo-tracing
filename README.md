@@ -4,18 +4,24 @@ Apollo Tracing is a proposed GraphQL response format extension to expose trace d
 
 To support tracing, GraphQL servers should include resolver timings and other execution information as part of the GraphQL response, and tools can extract this data from the response to give more insight into individual requests, and to track server performance and schema usage over time.
 
-The format is work in progress, and we're collaborating with others in the GraphQL community to make it broadly available, and to build awesome tools on top of it.
+The format is work in progress. We're collaborating with others in the GraphQL community to make it available in different server environments, and to build awesome tools on top of it!
 
-## Implementations
+Interested in working on support for other GraphQL servers, or integrations with more tools? Please get in touch on the `#apollo-tracing` channel on the [Apollo Slack](http://www.apollodata.com/#slack).
 
-### GraphQL Servers
+## GraphQL Servers
 
 - [Node.js](https://github.com/apollographql/apollo-tracing-js)
 - [Sangria (Scala)](https://gist.github.com/OlegIlyenko/124b55e58609ad45fcec276f15158d16)
 
-### Tools
+Support for Ruby is in progress, and people have expressed interest in working on Java, Python, Elixir and Reason implementations.
 
-#### Apollo Optics
+## Tools
+
+We hope the format will be broadly useful, and we encourage people to add support for it to their tools of choice.
+
+It would be great to see support for Apollo Tracing in [GraphiQL](https://github.com/graphql/graphiql) and the [Apollo Client developer tools](https://github.com/apollographql/apollo-client-devtools) for example!
+
+### Apollo Optics
 
 [Apollo Optics](https://www.apollodata.com/optics/) will use Apollo Tracing to add support for more GraphQL servers.
 
