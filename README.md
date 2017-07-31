@@ -6,14 +6,18 @@ To support tracing, GraphQL servers should include resolver timings and other ex
 
 The format is work in progress, and we're collaborating with others in the GraphQL community to make it broadly available, and to build awesome tools on top of it.
 
-### Implementations
+## Implementations
+
+### GraphQL Servers
 
 - [Node.js](https://github.com/apollographql/apollo-tracing-js)
 - [Sangria (Scala)](https://gist.github.com/OlegIlyenko/124b55e58609ad45fcec276f15158d16)
 
-### Use in Apollo Optics
+### Tools
 
-One use of Apollo Tracing is to add support for [Apollo Optics](https://www.apollodata.com/optics/) to more GraphQL servers.
+#### Apollo Optics
+
+[Apollo Optics](https://www.apollodata.com/optics/) will use Apollo Tracing to add support for more GraphQL servers.
 
 Currently, Apollo Optics relies on an agent running in a server that collects, aggregates, and batches up data to send to the Optics backend. Because agents contain fairly complicated logic, we've only been able to support Node.js and Ruby servers so far.
 
