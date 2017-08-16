@@ -8,7 +8,7 @@ The format is work in progress. We're collaborating with others in the GraphQL c
 
 Interested in working on support for other GraphQL servers, or integrations with more tools? Please get in touch on the `#apollo-tracing` channel on the [Apollo Slack](http://www.apollodata.com/#slack).
 
-## GraphQL Servers
+## Supported GraphQL Servers
 
 - [Node.js](https://github.com/apollographql/apollo-tracing-js)
 - [Sangria (Scala)](https://gist.github.com/OlegIlyenko/124b55e58609ad45fcec276f15158d16)
