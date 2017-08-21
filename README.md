@@ -32,7 +32,7 @@ Currently, Apollo Optics relies on an agent running in a server that collects, a
 
 In the new architecture, trace data is included with the GraphQL response, and a separate proxy process (provided by Apollo) is responsible for filtering out the trace data and performing the aggregation and batching. This will make it much easier to use Optics with every GraphQL server, as long as it supports Apollo Tracing.
 
-## Resonse Format
+## Response Format
 
 The GraphQL specification allows servers to [include additional information as part of the response under an `extensions` key](https://facebook.github.io/graphql/#sec-Response-Format):
 > The response map may also contain an entry with key `extensions`. This entry, if set, must have a map as its value. This entry is reserved for implementors to extend the protocol however they see fit, and hence there are no additional restrictions on its contents.
