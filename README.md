@@ -15,8 +15,9 @@ Interested in working on support for other GraphQL servers, or integrations with
 - [Java](https://github.com/graphql-java/graphql-java/pull/577)
 - [Elixir](https://github.com/sikanhe/apollo-tracing-elixir)
 - [OCaml](https://github.com/andreas/ocaml-graphql-server/issues/58)
+- [Ruby](https://github.com/uniiverse/graphql-tracing)
 
-Support for Ruby is in progress, and people have expressed interest in working on Python.
+People have expressed interest in working on Python.
 
 ## Tools
 
