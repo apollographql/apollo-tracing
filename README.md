@@ -83,11 +83,11 @@ In JavaScript, one can convert a Date object to this format using the standard [
 
 - The server should keep the start time of the request both as wall time, and as monotonic time to calculate `startOffset`s and `duration`s (for the request as a whole and for individual resolver calls, see below).
 
-- The `duration` of a request is relative to the request start.
+- The `duration` of a request is in nanoseconds, relative to the *request start*.
 
-- The `startOffset` of a resolver call is relative to the request start.
+- The `startOffset` of a resolver call is in nanoseconds, relative to the *request start*.
 
-- The `duration` of a resolver call is relative to the resolver call start.
+- The `duration` of a resolver call is in nanoseconds, relative to the *resolver call start*.
 
 - The `path` is the response path of the current resolver in a format similar to the error result format specified in the GraphQL specification:
 > This field should be a list of path segments starting at the root of the response and ending with the field associated with the error. Path segments that represent fields should be strings, and path segments that represent list indices should be 0‐indexed integers. If the error happens in an aliased field, the path to the error should use the aliased name, since it represents a path in the response, not in the query.
