@@ -33,7 +33,7 @@ Currently, Apollo Optics relies on an agent running in a server that collects, a
 
 In the new architecture, trace data is included with the GraphQL response, and a separate proxy process (provided by Apollo) is responsible for filtering out the trace data and performing the aggregation and batching. This will make it much easier to use Optics with every GraphQL server, as long as it supports Apollo Tracing.
 
-## Resonse Format
+## Response Format
 
 The GraphQL specification allows servers to [include additional information as part of the response under an `extensions` key](https://facebook.github.io/graphql/#sec-Response-Format):
 > The response map may also contain an entry with key `extensions`. This entry, if set, must have a map as its value. This entry is reserved for implementors to extend the protocol however they see fit, and hence there are no additional restrictions on its contents.
@@ -50,6 +50,14 @@ Apollo Tracing exposes trace data for an individual request under a `tracing` ke
       "startTime": <>,
       "endTime": <>,
       "duration": <>,
+      "parsing": {
+        "startOffset": <>,
+        "duration": <>,
+      },
+      "validation": {
+        "startOffset": <>,
+        "duration": <>,
+      },
       "execution": {
         "resolvers": [
           {
@@ -85,9 +93,9 @@ In JavaScript, one can convert a Date object to this format using the standard [
 
 - The `duration` of a request is in nanoseconds, relative to the *request start*.
 
-- The `startOffset` of a resolver call is in nanoseconds, relative to the *request start*.
+- The `startOffset` of parsing, validation, or a resolver call is in nanoseconds, relative to the *request start*.
 
-- The `duration` of a resolver call is in nanoseconds, relative to the *resolver call start*.
+- The `duration` of parsing, validation, or a resolver call is in nanoseconds, relative to the *resolver call start*.
 > The end of a resolver call represents the return of a value for a field, but it does not include resolving subfields. If an asynchronous value such as a promise is returned from a resolver however, the resolver call isn't considered to have ended until the asynchronous value has been resolved.
 
 - The `path` is the response path of the current resolver in a format similar to the error result format specified in the GraphQL specification:
@@ -132,6 +140,14 @@ query {
       "startTime": "2017-07-28T14:20:32.106Z",
       "endTime": "2017-07-28T14:20:32.109Z",
       "duration": 2694443,
+      "parsing": {
+        "startOffset": 34953,
+        "duration": 351736,
+      },
+      "validation": {
+        "startOffset": 412349,
+        "duration": 670107,
+      },
       "execution": {
         "resolvers": [
           {
