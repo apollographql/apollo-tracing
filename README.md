@@ -219,6 +219,6 @@ query {
 
 We recommend that people enable compression in their GraphQL server, because the tracing format adds to the response size, but compresses well.
 
-Although we tried other approaches to make the tracing format more compact (including deduplication of keys, commmon items, and structure) this complicated generating and interpreting trace data, and didn't bring the size down as much as compressing the entire HTTP response body does.
+Although we tried other approaches to make the tracing format more compact (including deduplication of keys, common items, and structure) this complicated generating and interpreting trace data, and didn't bring the size down as much as compressing the entire HTTP response body does.
 
 In our tests on Node.js, the processing overhead of compression is less than the overhead of sending additional bytes for an uncompressed response. But more test results from different server environments are definitely welcome, so we can help people make an informed decision about this.
