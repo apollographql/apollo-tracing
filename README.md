@@ -1,37 +1,24 @@
 # Apollo Tracing
 
-Apollo Tracing is a proposed GraphQL response format extension to expose trace data for requests.
+Apollo Tracing is a GraphQL extension for performance monitoring.
 
-To support tracing, GraphQL servers should include resolver timings and other execution information as part of the GraphQL response, and tools can extract this data from the response to give more insight into individual requests, and to track server performance and schema usage over time.
+Thanks to the community, Apollo Tracing already works with most popular GraphQL server libraries, including Node, Ruby, Scala, Java, and Elixir, and it enables you to easily get resolver-level performance information as part of a GraphQL response.
 
-The format is work in progress. We're collaborating with others in the GraphQL community to make it available in different server environments, and to build awesome tools on top of it!
+Apollo Tracing works by including data in the extensions field of the GraphQL response, which [is reserved by the GraphQL spec for extra information that a server wants to return](https://facebook.github.io/graphql/#sec-Response-Format). That way, you have access to performance traces alongside the data returned by your query.
 
-Interested in working on support for other GraphQL servers, or integrations with more tools? Please get in touch on the `#apollo-tracing` channel on the [Apollo Slack](http://www.apollodata.com/#slack).
+It’s already supported by Apollo Engine, the new version of Optics that [entered preview recently](https://dev-blog.apollodata.com/apollo-engine-and-graphql-error-tracking-e7dd3ce8b99d), and we’re excited to see what other kinds of integrations people can build on top of this format.
+
+We think this format is broadly useful, and we’d love to work with you to add support for it to your tools of choice. If you’re looking for a first idea, we especially think it would be great to see support for Apollo Tracing in [GraphiQL](https://github.com/graphql/graphiql) and the [Apollo Client developer tools](https://github.com/apollographql/apollo-client-devtools)!
+
+If you’re interested in working on support for other GraphQL servers, or integrations with more tools, please get in touch on the `#apollo-tracing` channel on the [Apollo Slack](http://www.apollodata.com/#slack).
 
 ## Supported GraphQL Servers
 
 - [Node.js](https://github.com/apollographql/apollo-tracing-js)
-- [Sangria (Scala)](https://gist.github.com/OlegIlyenko/124b55e58609ad45fcec276f15158d16)
+- [Ruby](https://github.com/uniiverse/graphql-tracing)
+- [Scala](https://gist.github.com/OlegIlyenko/124b55e58609ad45fcec276f15158d16)
 - [Java](https://github.com/graphql-java/graphql-java/pull/577)
 - [Elixir](https://github.com/sikanhe/apollo-tracing-elixir)
-- [OCaml](https://github.com/andreas/ocaml-graphql-server/issues/58)
-- [Ruby](https://github.com/uniiverse/graphql-tracing)
-
-People have expressed interest in working on Python.
-
-## Tools
-
-We hope the format will be broadly useful, and we encourage people to add support for it to their tools of choice.
-
-It would be great to see support for Apollo Tracing in [GraphiQL](https://github.com/graphql/graphiql) and the [Apollo Client developer tools](https://github.com/apollographql/apollo-client-devtools) for example!
-
-### Apollo Optics
-
-[Apollo Optics](https://www.apollodata.com/optics/) will use Apollo Tracing to add support for more GraphQL servers.
-
-Currently, Apollo Optics relies on an agent running in a server that collects, aggregates, and batches up data to send to the Optics backend. Because agents contain fairly complicated logic, we've only been able to support Node.js and Ruby servers so far.
-
-In the new architecture, trace data is included with the GraphQL response, and a separate proxy process (provided by Apollo) is responsible for filtering out the trace data and performing the aggregation and batching. This will make it much easier to use Optics with every GraphQL server, as long as it supports Apollo Tracing.
 
 ## Resonse Format
 
