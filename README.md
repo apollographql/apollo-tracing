@@ -15,7 +15,7 @@ If you’re interested in working on support for other GraphQL servers, or integ
 ## Supported GraphQL Servers
 
 - [Node.js](https://github.com/apollographql/apollo-tracing-js)
-- [Ruby](https://github.com/uniiverse/graphql-tracing)
+- [Ruby](https://github.com/uniiverse/apollo-tracing-ruby)
 - [Scala](https://gist.github.com/OlegIlyenko/124b55e58609ad45fcec276f15158d16)
 - [Java](https://github.com/graphql-java/graphql-java/pull/577)
 - [Elixir](https://github.com/sikanhe/apollo-tracing-elixir)
