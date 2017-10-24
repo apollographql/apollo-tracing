@@ -6,7 +6,7 @@ Thanks to the community, Apollo Tracing already works with most popular GraphQL 
 
 Apollo Tracing works by including data in the extensions field of the GraphQL response, which [is reserved by the GraphQL spec for extra information that a server wants to return](https://facebook.github.io/graphql/#sec-Response-Format). That way, you have access to performance traces alongside the data returned by your query.
 
-It’s already supported by Apollo Engine, the new version of Optics that [entered preview recently](https://dev-blog.apollodata.com/apollo-engine-and-graphql-error-tracking-e7dd3ce8b99d), and we’re excited to see what other kinds of integrations people can build on top of this format.
+It’s already supported by [Apollo Engine](https://www.apollographql.com/engine/), and we’re excited to see what other kinds of integrations people can build on top of this format.
 
 We think this format is broadly useful, and we’d love to work with you to add support for it to your tools of choice. If you’re looking for a first idea, we especially think it would be great to see support for Apollo Tracing in [GraphiQL](https://github.com/graphql/graphiql) and the [Apollo Client developer tools](https://github.com/apollographql/apollo-client-devtools)!
 
