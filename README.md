@@ -1,6 +1,6 @@
 # Apollo Tracing
 
-Apollo Tracing is a GraphQL extension for performance monitoring.
+Apollo Tracing is a GraphQL extension for performance tracing.
 
 Thanks to the community, Apollo Tracing already works with most popular GraphQL server libraries, including Node, Ruby, Scala, Java, and Elixir, and it enables you to easily get resolver-level performance information as part of a GraphQL response.
 
