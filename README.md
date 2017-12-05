@@ -16,7 +16,7 @@ If you’re interested in working on support for other GraphQL servers, or integ
 
 - [Node.js](https://github.com/apollographql/apollo-tracing-js)
 - [Ruby](https://github.com/uniiverse/apollo-tracing-ruby)
-- [Scala](https://gist.github.com/OlegIlyenko/124b55e58609ad45fcec276f15158d16)
+- [Scala](https://github.com/sangria-graphql/sangria-slowlog#apollo-tracing-extension)
 - [Java](https://github.com/graphql-java/graphql-java/pull/577)
 - [Elixir](https://github.com/sikanhe/apollo-tracing-elixir)
 
