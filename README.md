@@ -78,11 +78,11 @@ In JavaScript, one can convert a Date object to this format using the standard [
 
 - The server should keep the start time of the request both as wall time, and as monotonic time to calculate `startOffset`s and `duration`s (for the request as a whole and for individual resolver calls, see below).
 
-- The `duration` of a request is in nanoseconds, relative to the *request start*.
+- The `duration` of a request is in nanoseconds, relative to the *request start*, as an integer.
 
-- The `startOffset` of parsing, validation, or a resolver call is in nanoseconds, relative to the *request start*.
+- The `startOffset` of parsing, validation, or a resolver call is in nanoseconds, relative to the *request start*, as an integer.
 
-- The `duration` of parsing, validation, or a resolver call is in nanoseconds, relative to the *resolver call start*.
+- The `duration` of parsing, validation, or a resolver call is in nanoseconds, relative to the *resolver call start*, as an integer.
 > The end of a resolver call represents the return of a value for a field, but it does not include resolving subfields. If an asynchronous value such as a promise is returned from a resolver however, the resolver call isn't considered to have ended until the asynchronous value has been resolved.
 
 - The `path` is the response path of the current resolver in a format similar to the error result format specified in the GraphQL specification:
