@@ -20,6 +20,7 @@ If you’re interested in working on support for other GraphQL servers, or integ
 - [Java](https://github.com/graphql-java/graphql-java/pull/577)
 - [Elixir](https://github.com/sikanhe/apollo-tracing-elixir)
 - [.NET](https://graphql-dotnet.github.io/docs/getting-started/metrics)
+- [PHP/Laravel](https://lighthouse-php.com/master/extensions/tracing.html)
 
 ## Response Format
 
