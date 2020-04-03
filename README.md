@@ -4,7 +4,7 @@ Apollo Tracing is a GraphQL extension for performance tracing.
 
 Thanks to the community, Apollo Tracing already works with most popular GraphQL server libraries, including Node, Ruby, Scala, Java, and Elixir, and it enables you to easily get resolver-level performance information as part of a GraphQL response.
 
-Apollo Tracing works by including data in the extensions field of the GraphQL response, which [is reserved by the GraphQL spec for extra information that a server wants to return](https://facebook.github.io/graphql/#sec-Response-Format). That way, you have access to performance traces alongside the data returned by your query.
+Apollo Tracing works by including data in the extensions field of the GraphQL response, which [is reserved by the GraphQL spec for extra information that a server wants to return](http://spec.graphql.org/June2018/#sec-Response-Format). That way, you have access to performance traces alongside the data returned by your query.
 
 It’s already supported by [Apollo Engine](https://www.apollographql.com/engine/), and we’re excited to see what other kinds of integrations people can build on top of this format.
 
@@ -23,7 +23,7 @@ If you’re interested in working on support for other GraphQL servers, or integ
 
 ## Response Format
 
-The GraphQL specification allows servers to [include additional information as part of the response under an `extensions` key](https://facebook.github.io/graphql/#sec-Response-Format):
+The GraphQL specification allows servers to [include additional information as part of the response under an `extensions` key](http://spec.graphql.org/June2018/#sec-Response-Format):
 > The response map may also contain an entry with key `extensions`. This entry, if set, must have a map as its value. This entry is reserved for implementors to extend the protocol however they see fit, and hence there are no additional restrictions on its contents.
 
 Apollo Tracing exposes trace data for an individual request under a `tracing` key in `extensions`:
