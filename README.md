@@ -22,6 +22,7 @@ If you’re interested in working on support for other GraphQL servers, or integ
 - .NET
   - [graphql-dotnet](https://graphql-dotnet.github.io/docs/getting-started/metrics)
   - [Hot Chocolate](https://hotchocolate.io/docs/apollo-tracing)
+- [PHP/Laravel](https://lighthouse-php.com/master/performance/tracing.html)
 
 ## Response Format
 
