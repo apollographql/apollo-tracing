@@ -14,7 +14,7 @@ If you’re interested in working on support for other GraphQL servers, or integ
 
 ## Supported GraphQL Servers
 
-- [Node.js](https://github.com/apollographql/apollo-server/tree/master/packages/apollo-tracing)
+- [Node.js](https://github.com/apollographql/apollo-server/tree/HEAD/packages/apollo-tracing)
 - [Ruby](https://github.com/uniiverse/apollo-tracing-ruby)
 - Scala
   - [Sangria](https://github.com/sangria-graphql/sangria-slowlog#apollo-tracing-extension)
@@ -73,7 +73,7 @@ Apollo Tracing exposes trace data for an individual request under a `tracing` ke
 
 - The `startTime` and `endTime` of the request are timestamps in [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) format with at least millisecond but up to nanosecond precision (depending on platform support).
 
-Some more details (adapted from [the description of the JSON encoding of Protobuf's Timestamp type](https://github.com/google/protobuf/blob/master/src/google/protobuf/timestamp.proto)):
+Some more details (adapted from [the description of the JSON encoding of Protobuf's Timestamp type](https://github.com/google/protobuf/blob/HEAD/src/google/protobuf/timestamp.proto)):
 
 > A timestamp is encoded as a string in the [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) format. That is, the format is "{year}-{month}-{day}T{hour}:{min}:{sec}[.{frac_sec}]Z" where {year} is always expressed using four digits while {month}, {day}, {hour}, {min}, and {sec} are zero-padded to two digits each. The fractional seconds, which can go up to 9 digits (i.e. up to 1 nanosecond resolution), are optional. The "Z" suffix indicates the timezone ("UTC"); the timezone is required, though only UTC (as indicated by "Z") is presently supported.
 For example, "2017-01-15T01:30:15.01Z" encodes 15.01 seconds past 01:30 UTC on January 15, 2017.
