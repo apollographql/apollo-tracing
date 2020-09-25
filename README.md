@@ -20,6 +20,7 @@ If you’re interested in working on support for other GraphQL servers, or integ
   - [Sangria](https://github.com/sangria-graphql/sangria-slowlog#apollo-tracing-extension)
   - [Caliban](https://ghostdogpr.github.io/caliban/docs/middleware.html#wrapper-types)
 - [Java](https://github.com/graphql-java/graphql-java/pull/577)
+- [Clojure](https://github.com/walmartlabs/lacinia)
 - [Elixir](https://github.com/sikanhe/apollo-tracing-elixir)
 - .NET
   - [graphql-dotnet](https://graphql-dotnet.github.io/docs/getting-started/metrics)
