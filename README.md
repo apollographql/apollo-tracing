@@ -15,6 +15,8 @@ If you’re interested in working on support for other GraphQL servers, or integ
 ## Supported GraphQL Servers
 
 - [Node.js](https://github.com/apollographql/apollo-server/tree/HEAD/packages/apollo-tracing)
+- Python
+  - [ariadne](https://ariadnegraphql.org/docs/apollo-tracing)
 - [Ruby](https://github.com/uniiverse/apollo-tracing-ruby)
 - Scala
   - [Sangria](https://github.com/sangria-graphql/sangria-slowlog#apollo-tracing-extension)
