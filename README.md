@@ -2,7 +2,7 @@
 
 Apollo Tracing is a GraphQL extension for performance tracing.
 
-Thanks to the community, Apollo Tracing already works with most popular GraphQL server libraries, including Node, Ruby, Scala, Java, Elixir and .NET, and it enables you to easily get resolver-level performance information as part of a GraphQL response.
+Thanks to the community, Apollo Tracing already works with most popular GraphQL server libraries, including Node, Ruby, Scala, Java, Elixir, Go and .NET, and it enables you to easily get resolver-level performance information as part of a GraphQL response.
 
 Apollo Tracing works by including data in the extensions field of the GraphQL response, which [is reserved by the GraphQL spec for extra information that a server wants to return](https://spec.graphql.org/June2018/#sec-Response-Format). That way, you have access to performance traces alongside the data returned by your query.
 
@@ -27,6 +27,7 @@ If you’re interested in working on support for other GraphQL servers, or integ
   - [graphql-dotnet](https://graphql-dotnet.github.io/docs/getting-started/metrics)
   - [Hot Chocolate](https://hotchocolate.io/docs/apollo-tracing)
 - [PHP/Laravel](https://lighthouse-php.com/master/performance/tracing.html)
+- [Go](https://github.com/99designs/gqlgen/tree/master/graphql/handler/apollotracing)
 
 ## Response Format
 
