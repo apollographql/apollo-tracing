@@ -1,5 +1,10 @@
 # Apollo Tracing
 
+---
+
+> **[2022-02-16] Deprecation Notice:** We (Apollo) are working towards fully deprecating this repository. The current implementation of Apollo Server uses different mechanisms for tracing and metrics when integrating with [Apollo Studio](https://www.apollographql.com/docs/apollo-server/monitoring/metrics/). We'll share detailed migration documentation when everything here is ready to be officially deprecated, but just a heads up in case you're planning on adopting anything here for a new project (which you still can of course if this project works for you - support for this project will be minimal however).
+---
+
 Apollo Tracing is a GraphQL extension for performance tracing.
 
 Thanks to the community, Apollo Tracing already works with most popular GraphQL server libraries, including Node, Ruby, Scala, Java, Elixir, Go and .NET, and it enables you to easily get resolver-level performance information as part of a GraphQL response.
