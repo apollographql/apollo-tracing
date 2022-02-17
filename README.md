@@ -1,5 +1,11 @@
 # Apollo Tracing
 
+---
+
+> **[2022-02-16] Notice:** This tracing format was designed to provide tracing data from graphs to the Apollo Engine `engineproxy`, a project which was retired in 2018. We learned that a trace format which describes resolvers with a flat list of paths (with no way to aggregate similar nodes or repeated path prefixes) was inefficient enough to have real impacts on server performance, and so we have not been actively developing consumers or producers of this format for several years. Apollo Server (as of v3) no longer ships with support for producing this format, and `engineproxy` which consumed it is no longer supported. We suggest that people looking for formats for describing performance traces consider either the [Apollo Studio protobuf-based trace format](https://www.apollographql.com/docs/studio/metrics/usage-reporting/#tracing-format) or a more generic format such as OpenTelemetry.
+ 
+---
+
 Apollo Tracing is a GraphQL extension for performance tracing.
 
 Thanks to the community, Apollo Tracing already works with most popular GraphQL server libraries, including Node, Ruby, Scala, Java, Elixir, Go and .NET, and it enables you to easily get resolver-level performance information as part of a GraphQL response.
